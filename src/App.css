@@ -224,12 +224,26 @@ main {
 
 
 .footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
+  background-color: #333; /* Dark background color */
+  color: white; /* Text color */
+  padding: 20px 0; /* Padding at top and bottom */
+  display: flex;
+  justify-content: space-between; /* Aligns content with space between */
+  align-items: center; /* Centers items vertically */
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  text-align: center; /* Center-align text */
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 0.9em;
 }
 
-.footer-info {
-  margin: 0;
+.social-link {
+  display: inline-block;
+  margin-left: 10px; /* Adjust spacing between social links */
+  color: white;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  text-decoration: underline; /* Underline on hover */
 }
