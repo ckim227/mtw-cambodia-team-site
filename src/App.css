@@ -10,6 +10,7 @@ body {
   text-align: center;
 }
 
+/* HEADER STYLING */
 .header {
   position: relative;
   background: url('./images/skyline.jpg') no-repeat center center;
@@ -55,6 +56,7 @@ body {
 .language-toggle button:hover {
   background: #ddd;
 }
+/* HEADER STYLING End */
 
 main {
   padding: 20px;
@@ -63,6 +65,8 @@ main {
   justify-content: center; /* Centers content horizontally */
   align-items: center; /* Centers content vertically */
 }
+
+/* SECTION STYLING */
 .section {
   position: relative;
   margin: 40px 0;
@@ -127,9 +131,10 @@ main {
     font-size: 0.7em; /* Further reduced font size for very small screens */
   }
 }
+/* SECTION STYLING End */
 
 
-/* Contact Form Wrapper */
+/* CONTACT FORM STYLING */
 #contact-form-wrapper {
   display: flex;
   justify-content: center;
@@ -166,14 +171,12 @@ main {
   text-align: center;
 }
 
-/* Heading */
 #contact-form-wrapper h2 {
   margin-bottom: 20px;
   font-size: 1.5em;
   color: #333;
 }
 
-/* Contact Form */
 #contact-form {
   display: flex;
   flex-direction: column;
@@ -220,9 +223,10 @@ main {
   background-color: #77a1f4;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
+/* CONTACT FORM STYLING End */
 
 
-
+/* FOOTER STYLING */
 .footer {
   background-color: #333; /* Dark background color */
   color: white; /* Text color */
