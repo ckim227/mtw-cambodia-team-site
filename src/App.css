@@ -1,38 +1,235 @@
+body {
+  font-family: 'Khmer', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  position: relative;
+  background: url('./images/skyline.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 80px 20px;
+  z-index: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Adjust the opacity here */
+  z-index: 0;
+}
+
+.header-title {
+  position: relative;
+  z-index: 1;
+}
+
+.language-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.language-toggle button {
+  margin: 0 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: white;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.language-toggle button:hover {
+  background: #ddd;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stack sections vertically */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+}
+.section {
+  position: relative;
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensures text does not overflow from image */
+  max-width: 800px;
+}
+
+.section-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Ensures image covers the container */
+}
+
+.section-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Opaque background */
+  color: white;
+  padding: 20px;
+  width: 80%; /* Adjusted width for text content box */
+  max-width: 600px; /* Maximum width for text content */
+  text-align: center;
+}
+
+.section-content h2 {
+  margin-bottom: 10px; /* Reduced margin for tighter spacing */
+  font-size: 1.5em; /* Larger font size for heading */
+}
+
+.section-content p {
+  margin: 0;
+  font-size: 0.9em; /* Smaller font size for paragraph */
+}
+
+/* Responsive Text Size */
+@media (max-width: 768px) {
+  .section-content h2 {
+    font-size: 1.2em; /* Adjusted font size for smaller screens */
+  }
+  
+  .section-content p {
+    font-size: 0.8em; /* Adjusted font size for smaller screens */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-width: 480px) {
+  .section-content h2 {
+    font-size: 1em; /* Further reduced font size for very small screens */
+  }
+  
+  .section-content p {
+    font-size: 0.7em; /* Further reduced font size for very small screens */
+  }
+}
+
+
+/* Contact Form Wrapper */
+#contact-form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 550px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Contact Form Section */
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Contact Form Wrapper */
+#contact-form-wrapper {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Heading */
+#contact-form-wrapper h2 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+/* Contact Form */
+#contact-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+}
+
+#contact-form label {
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #333;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 8px;
+  margin: 5px 0 15px 0;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+#contact-form textarea {
+  resize: vertical; /* Allows vertical resizing */
+  height: 100px;
+}
+
+#contact-form button {
+  padding: 8px 16px;
+  background-color: #6698fa;
   color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  font-size: 0.9em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+#contact-form button:hover {
+  background-color: #77a1f4;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-info {
+  margin: 0;
 }
